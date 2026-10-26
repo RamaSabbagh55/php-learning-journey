@@ -5,7 +5,8 @@
 // Password Validation
 echo"whats uour passwords?";
 $enter=readline();
-if($enter==12345){
+$pass="abc$123";
+if($enter==$pass){
   echo"Welcome\n"; 
 }else
    echo "I don’t know you!!\n";
