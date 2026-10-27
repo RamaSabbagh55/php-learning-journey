@@ -17,7 +17,7 @@
 // }elseif($Unum<$Cnum){
 //         echo "Low Guess again:";
 // }
-$i=0;
+$i=1;
 echo "Let's play Guess the Number.\n";
 $Cnum=rand(1,10);echo "The computer number".$Cnum;
 $Unum=readline("I have my number. What's your guess?");
