@@ -20,11 +20,19 @@ switch ($str ){
 $length=readline("Enter the number of characters to read (or 'all' for all content): ");
 fopen(Tasks/$file,"r");
     case 2:
-          $file = readline("Enter file name:  \n");
+$file = readline("Enter file name:  \n");
 $length=readline("Enter the number of characters to read (or 'all' for all content): ");
-  $file2 = fopen("Tasks/$file","r");
+$file2 = fopen("Tasks/$file","r");
+if ($length ==="all"){
+$moh=filesize("Tasks/exp.txt");
+echo $moh;
+echo fread($file2,filesize("Tasks/$file"));
+
+}else{
 echo fread($file2,$length);
-   break;
+}
+fclose($file2);
+ break;
      case 3:
    echo ucwords($str)."\n\n";
    break;
