@@ -5,6 +5,7 @@ $CCode=array(
 "Egypt"=> 20 ,
 "United Arab Emirates"=> 971,
 );
+if (isset($_GET["name"])){// هنا استخدمنا isset عشان نتحقق من وجود مفتاح في الطلب وعدم ارساله فارغ 
 $countrtName=$_GET["name"];
 if(array_key_exists($countrtName,$CCode)){
     echo $countrtName .": ".$CCode[$countrtName] ;
@@ -12,5 +13,8 @@ if(array_key_exists($countrtName,$CCode)){
         echo "اسم الدولة غير موجود ضمن القائمة.";
 };
 
+}else{
 
+echo "يرجى إدخال اسم الدولة للبحث عن مفتاح الاتصال الخاص بها.";
+};
 ?>
